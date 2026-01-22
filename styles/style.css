@@ -101,6 +101,7 @@ ol {
 .button {
   font-family: inherit;
   font-size: 18px;
+  font-weight: 700;
   color: #fff;
   background-color: transparent;
   border: 1px solid #fff;
@@ -189,7 +190,14 @@ ol {
   background-color: #fff;
 }
 
-.search-form__label:has(.search-form__checkbox:focus-visible) {
+.search-form__textfield:focus,
+.search-form__checkbox:focus {
+  outline: none;
+}
+
+
+.search-form__label:has(.search-form__checkbox:focus-visible),
+.search-form__label:has(.search-form__textfield:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -236,13 +244,12 @@ ol {
   justify-content: space-between;
 }
 
-.content__video-card:active {
+.content__card-link:hover .content__video-card {
   background-color: #545050;
 }
 
-.content__video-card:hover {
-  text-decoration: underline solid 1px;
-  text-underline-offset: 4px;
+.content__card-link_current .content__video-card {
+  background-color: #545050;
 }
 
 .content__video-card-description-container {
@@ -251,13 +258,18 @@ ol {
   padding-left: 2px;
 }
 
+.content__video-card:hover {
+  text-decoration: underline solid 1px;
+  text-underline-offset: 2px;
+}
+
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
