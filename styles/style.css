@@ -79,7 +79,6 @@ ol {
 
 .content__details {
   width: 399px;
-  height: 534px;
 }
 
 .content__list-container {
@@ -258,7 +257,7 @@ ol {
   padding-left: 2px;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline solid 1px;
   text-underline-offset: 2px;
 }
